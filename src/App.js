@@ -4,23 +4,21 @@ import './App.css';
 import {Radio, RadioGroup} from "react-radio-group";
 import Context from "./context";
 
-const ApplicationContext = createContext();
+const ApplicationContext = createContext({
+  selectedValue: undefined,
+  
+});
 
-// const {Provider, Consumer} = ThemeContext;
+
+ const {Provider, Consumer} = ApplicationContext;
 
 class App extends Component {
  
-  state={
-    selectedValue: undefined
-  }
-  
- 
-  
   render() {
     return(
-      <ApplicationContext>
+      <ApplicationContext.P>
       <Context/>
-      </ApplicationContext>
+      </ApplicationContext.P>
       )
     
   }
